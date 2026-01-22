@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:3001",
+  baseURL: "https://bloggingsite-doz9.onrender.com",
   headers: {
     "Content-Type": "application/json",
   },
@@ -16,7 +16,7 @@ API.interceptors.request.use(
     }
     return config;
   },
-  (error) => Promise.reject(error)
+  (error) => Promise.reject(error),
 );
 
 export default API;
